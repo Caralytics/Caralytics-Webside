@@ -22,7 +22,7 @@ export default function Datenschutz() {
         <section style={{ marginBottom: "1.5rem" }}>
           <h2 style={{ fontSize: "1.4rem", marginBottom: "0.5rem" }}>1. Verantwortlicher</h2>
           <p>
-            Caralytics – Engineering<br />
+            Caralytics Engineering<br />
             Inhaber: Aland Goran<br />
             Rudolfplatz 3<br />
             50674 Köln<br />
