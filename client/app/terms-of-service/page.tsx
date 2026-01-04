@@ -1,16 +1,28 @@
-export default function TermsOfServicePage() {
+export default function Impressum() {
   return (
-    <section className="bg-brand-bg text-brand-text min-h-screen flex flex-col justify-center opacity-0 animate-fade-in transition-all duration-300 dark:bg-brand-deep dark:text-brand-surface">
-      <div className="container mx-auto px-6 py-16 md:py-24 max-w-4xl">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-brand-heading dark:text-brand-surface transition-all duration-300">
-            Impressum
-          </h1>
-          <p className="mt-8 text-lg md:text-xl text-brand-graphite dark:text-brand-muted-surface transition-all duration-300">
-            Demnächst verfügbar
-          </p>
-        </div>
-      </div>
-    </section>
+    <main style={{ padding: "2rem", maxWidth: "900px", margin: "0 auto" }}>
+      <h1>Impressum</h1>
+
+      <p><strong>Caralytics – Engineering</strong><br/>
+      Inhaber: Aland Goran (Freiberufler)<br/>
+      Rudolfplatz 3<br/>
+      50674 Köln</p>
+
+      <p>Telefon: +49 170 3577305<br/>
+      E-Mail: info@caralytics.de</p>
+
+      <h2>Haftung für Inhalte</h2>
+      <p>
+        Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+        Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+      </p>
+
+      <h2>Urheberrecht</h2>
+      <p>
+        Die durch den Betreiber dieser Seite erstellten Inhalte und Werke auf diesen Seiten
+        unterliegen dem deutschen Urheberrecht.
+      </p>
+    </main>
   );
 }
+
