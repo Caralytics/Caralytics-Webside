@@ -121,7 +121,8 @@ const AccidentDamageReportsPage = () => {
                     </div>
 
                     {/* Center Icon */}
-                    <div className="relative z-10 shrink-0 flex items-center justify-center w-16 h-16 rounded-full bg-brand-deep-navy border-4 border-brand-cloud-gray shadow-lg text-brand-electric-purple group">
+                    <div className="relative z-10 shrink-0 flex items-center justify-center w-16 h-16 rounded-full bg-brand-cloud-gray shadow-lg text-brand-electric-purple">
+>
                       <step.icon className="w-8 h-8" />
                     </div>
 
