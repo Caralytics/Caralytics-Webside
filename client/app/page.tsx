@@ -14,7 +14,7 @@ export default function Home() {
           {/* Fallback gradient background */}
           <div className="absolute inset-0 bg-linear-to-br from-brand-deep-navy via-brand-deep-navy/90 to-brand-deep-navy/80" />
           <Image
-            alt="Carlytics"
+            alt="Caralytics"
             height={54}
             width={54}
             src={`${ASSETS_SRC}/logo/svg/logo-plainwhite-emblem-with-text.svg`}
@@ -31,7 +31,7 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center gap-2 md:gap-2 mt-20">
             {/* H1 Title */}
             <h1 className="text-xl md:text-2xl lg:text-[28px] font-light text-brand-white/60 leading-relaxed max-w-3xl animate-[fade-in_2.5s_ease-in-out_1_forwards]">
-              Unfallgutachten in Köln Tüv zertifiziert vom Fahrzeugingenieur.
+              Unfallgutachten in Köln - Tüv zertifiziert vom Fahrzeugingenieur.
             </h1>
 
             {/* CTA Button */}
