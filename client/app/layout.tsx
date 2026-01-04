@@ -26,5 +26,12 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-
-        
+        className={`${manrope.variable} font-sans bg-brand-deep-navy flex flex-col w-screen overflow-x-hidden`}
+      >
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
