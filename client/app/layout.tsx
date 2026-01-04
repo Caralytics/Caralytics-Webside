@@ -9,11 +9,12 @@ const manrope = Manrope({
   variable: "--font-manrope",
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "export const metadata = {
-  title: "Kfz-Gutachter Köln – Unfallgutachten & Schadengutachten | Caralytics Engineering",
-  description: "Unfall gehabt? Als Fahrzeugingenieur und TÜV-geschulter Kfz-Sachverständiger in Köln erstellen wir rechtssichere Unfallgutachten – präzise Beweissicherung, Reparaturempfehlung und Unterstützung bei der Schadensregulierung.",
+  title: "Kfz-Gutachter Köln – Unfallgutachten & Schadengutachten | Caralytics – Engineering",
+  description:
+    "Unfall in Köln passiert? Unfallgutachten durch Fahrzeugingenieur und TÜV-geschulten Kfz-Sachverständigen in Köln – wir sichern Beweise, ermitteln die Schadenhöhe und unterstützen bei der Regulierung mit der Versicherung.",
 };
 ",
   description: "AI-powered vehicle valuation for the modern era",
