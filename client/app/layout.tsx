@@ -11,7 +11,11 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Carlytics - Precision Meets Intelligence",
+  title: "export const metadata = {
+  title: "Kfz-Gutachter Köln – Unfallgutachten & Schadengutachten | Caralytics Engineering",
+  description: "Unfall gehabt? Als Fahrzeugingenieur und TÜV-geschulter Kfz-Sachverständiger in Köln erstellen wir rechtssichere Unfallgutachten – präzise Beweissicherung, Reparaturempfehlung und Unterstützung bei der Schadensregulierung.",
+};
+",
   description: "AI-powered vehicle valuation for the modern era",
   icons: "/assets/logo/favicon-32x32-and-16x16/32x32.png",
 };
