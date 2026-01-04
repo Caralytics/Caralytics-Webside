@@ -19,7 +19,7 @@ export default function Impressum() {
 
         <section style={{ marginBottom: "1.5rem" }}>
           <p>
-            <strong>Caralytics – Engineering</strong><br />
+            <strong>Caralytics Engineering</strong><br />
             Inhaber: Aland Goran (Freiberufler)<br />
             Rudolfplatz 3<br />
             50674 Köln
