@@ -9,7 +9,6 @@ const manrope = Manrope({
   variable: "--font-manrope",
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
@@ -25,14 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body
-        className={`${manrope.variable} font-sans bg-brand-deep-navy flex flex-col w-screen overflow-x-hidden`}
-      >
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
-}
+
+        
