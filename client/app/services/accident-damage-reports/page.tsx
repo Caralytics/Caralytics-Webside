@@ -80,8 +80,8 @@ const AccidentDamageReportsPage = () => {
                 So läuft der Ablauf ab
               </h2>
               <p className="text-lg text-brand-graphite leading-relaxed">
-                If another party is at fault, their insurance pays. We guide you
-                through every step.
+                Trägt die Gegenseite die Schuld, zahlt ihre Versicherung.
+                Wir unterstützen Sie in jedem Schritt.
               </p>
             </div>
           </FadeIn>
@@ -121,7 +121,7 @@ const AccidentDamageReportsPage = () => {
                     </div>
 
                     {/* Center Icon */}
-                    <div className="relative z-10 shrink-0 flex items-center justify-center w-16 h-16 rounded-full bg-brand-cloud-gray shadow-lg text-brand-electric-purple">
+                    <div className="relative z-10 shrink-0 flex items-center justify-center w-16 h-16 rounded-full !bg-brand-cloud-gray shadow-lg text-brand-electric-purple">
                       <step.icon className="w-8 h-8" />
                     </div>
 
