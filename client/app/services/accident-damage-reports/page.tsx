@@ -77,20 +77,21 @@ const AccidentDamageReportsPage = () => {
           <FadeIn direction="up">
             <div className="max-w-4xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-deep-navy mb-6">
-                So läuft der Ablauf ab
+                So läuft der Prozess ab
               </h2>
               <p className="text-lg text-brand-graphite leading-relaxed">
-                Trägt die Gegenseite die Schuld, zahlt ihre Versicherung.
-                Wir unterstützen Sie in jedem Schritt.
+                Wenn die Gegenseite den Unfall verursacht hat, übernimmt in der
+                Regel deren Versicherung die Kosten. Wir begleiten Sie Schritt
+                für Schritt durch den gesamten Prozess.
               </p>
             </div>
           </FadeIn>
 
           <div className="relative max-w-5xl mx-auto">
-            {/* Vertical Line (Desktop) - purely visual guide */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-brand-electric-purple via-brand-electric-purple/30 to-transparent hidden md:block -translate-x-1/2"></div>
+            {/* dezente vertikale Linie im Hintergrund (nur Desktop) */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-brand-electric-purple/20 pointer-events-none hidden md:block -translate-x-1/2" />
 
-            <div className="space-y-12 md:space-y-0">
+            <div className="space-y-10">
               {steps.map((step, index) => (
                 <FadeIn
                   key={index}
@@ -99,34 +100,40 @@ const AccidentDamageReportsPage = () => {
                   className="relative"
                 >
                   <div
-                    className={`flex flex-col md:flex-row gap-8 items-center ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
+                    className={`relative flex flex-col items-center gap-6 md:gap-10 md:flex-row ${
+                      index % 2 === 0 ? "md:flex-row-reverse" : ""
+                    }`}
                   >
-                    {/* Content */}
+                    {/* Text-Card */}
                     <div className="flex-1 w-full">
-                      <Card className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-white">
-                        <CardHeader className="pb-2">
-                          <CardTitle className="text-xl font-bold text-brand-deep-navy flex items-center gap-3">
-                            <span className="md:hidden flex items-center justify-center w-8 h-8 rounded-full bg-brand-electric-purple text-white text-sm">
-                              {index + 1}
-                            </span>
+                      <Card className="border border-brand-cloud-gray/60 bg-white/80 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <CardHeader className="pb-3">
+                          <p className="text-xs uppercase tracking-[0.2em] text-brand-electric-purple mb-1">
+                            Schritt {index + 1}
+                          </p>
+                          <CardTitle className="text-xl font-semibold text-brand-deep-navy">
                             {step.title}
                           </CardTitle>
                         </CardHeader>
                         <CardContent>
-                          <p className="text-brand-graphite">
+                          <p className="text-brand-graphite leading-relaxed">
                             {step.description}
                           </p>
                         </CardContent>
                       </Card>
                     </div>
 
-                    {/* Center Icon */}
-                    <div className="relative z-10 shrink-0 flex items-center justify-center w-16 h-16 rounded-full !bg-brand-cloud-gray shadow-lg text-brand-electric-purple">
-                      <step.icon className="w-8 h-8" />
+                    {/* Icon in der Mitte – moderner Look */}
+                    <div className="relative z-10 shrink-0">
+                      <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 shadow-md">
+                        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-brand-deep-navy text-brand-electric-purple">
+                          <step.icon className="w-6 h-6 stroke-[2.4]" />
+                        </div>
+                      </div>
                     </div>
 
-                    {/* Spacer for alternate side */}
-                    <div className="flex-1 hidden md:block"></div>
+                    {/* Spacer für die Gegenseite (Desktop) */}
+                    <div className="hidden md:flex flex-1" />
                   </div>
                 </FadeIn>
               ))}
@@ -181,7 +188,7 @@ const AccidentDamageReportsPage = () => {
           </FadeIn>
         </div>
 
-        {/* CTA - Added this section */}
+        {/* CTA */}
         <FadeIn direction="up">
           <div className="relative rounded-3xl overflow-hidden bg-brand-deep-navy text-white shadow-2xl">
             <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-brand-electric-purple rounded-full opacity-20 blur-3xl"></div>
