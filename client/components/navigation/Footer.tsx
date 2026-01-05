@@ -152,7 +152,7 @@ export default function Footer() {
         <div className="mt-12 md:mt-16 pt-8 border-t border-brand-muted-surface/20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-brand-muted-surface">
             <p>
-              &copy; {new Date().getFullYear()} Carlytics. All rights reserved.
+              &copy; {new Date().getFullYear()} Caralytics. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link
