@@ -6,9 +6,8 @@ interface CertBadgesProps {
 }
 
 export default function CertBadges({ className }: CertBadgesProps) {
-  // Basis-Style für alle Badges
   const defaultClassName =
-    "opacity-60 h-14 md:h-16 w-auto object-contain hover:opacity-100 transition-all duration-300 hover:scale-105";
+    "opacity-60 h-16 md:h-20 w-auto object-contain hover:opacity-100 transition-all duration-300 hover:scale-105";
 
   return (
     <>
@@ -21,19 +20,14 @@ export default function CertBadges({ className }: CertBadgesProps) {
         className={twMerge(defaultClassName, className)}
       />
 
-      {/* TÜV-Badge – leicht größer, damit es optisch nicht untergeht */}
+      {/* TÜV-Badge */}
       <Image
         src="/assets/cert-badge-2.png"
         alt="TÜV Rheinland Certified – ID 0000085895"
-        width={710}
-        height={201}
-        className={twMerge(
-          defaultClassName,
-          "h-16 md:h-18", // TÜV etwas höher, aber mit korrekter Ratio
-          className
-        )}
+        width={400}  // 16:7 Verhältnis: 400 / 175 ≈ 2,285
+        height={175}
+        className={twMerge(defaultClassName, className)}
       />
     </>
   );
 }
-
