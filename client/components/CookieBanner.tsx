@@ -22,6 +22,7 @@ export default function CookieBanner() {
         <h3 className="font-semibold text-lg">
           Cookies &amp; Datenschutzeinstellungen
         </h3>
+
         <p className="text-sm mt-2 text-neutral-700">
           Wir verwenden Cookies, um die Nutzung unserer Website auszuwerten
           (Google Analytics). Technisch nicht notwendige Cookies werden nur mit
@@ -33,6 +34,7 @@ export default function CookieBanner() {
         </p>
 
         <div className="flex flex-wrap gap-3 justify-end mt-4">
+          {/* Nur notwendige */}
           <button
             className="px-4 py-2 rounded-md border text-sm"
             onClick={() => {
@@ -46,8 +48,10 @@ export default function CookieBanner() {
             Nur notwendige
           </button>
 
+          {/* Alle akzeptieren – MAUVE */}
           <button
-            className="px-4 py-2 rounded-md bg-black text-white text-sm"
+            className="px-4 py-2 rounded-md text-white text-sm shadow-md transition"
+            style={{ backgroundColor: "#A46BF5" }}
             onClick={() => {
               if (typeof window !== "undefined") {
                 localStorage.setItem(STORAGE_KEY, "accepted");
@@ -63,3 +67,4 @@ export default function CookieBanner() {
     </div>
   );
 }
+
