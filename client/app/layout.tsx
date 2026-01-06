@@ -1,3 +1,4 @@
+import CookieBanner from "@/components/CookieBanner";
 import Script from "next/script";
 import Footer from "@/components/navigation/Footer";
 import Navbar from "@/components/navigation/Navbar";
@@ -50,6 +51,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
