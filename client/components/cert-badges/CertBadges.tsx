@@ -21,7 +21,7 @@ export default function CertBadges({ className }: CertBadgesProps) {
         className={twMerge(defaultClassName, className)}
       />
 
-      {/* TÜV-Badge – leicht größer, damit es nicht „zu klein“ wirkt */}
+      {/* TÜV-Badge – leicht größer, damit es optisch nicht untergeht */}
       <Image
         src="/assets/cert-badge-2.png"
         alt="TÜV Rheinland Certified – ID 0000085895"
@@ -29,10 +29,11 @@ export default function CertBadges({ className }: CertBadgesProps) {
         height={201}
         className={twMerge(
           defaultClassName,
-          "h-16 md:h-18", // TÜV etwas höher als VDI
+          "h-16 md:h-18", // TÜV etwas höher, aber mit korrekter Ratio
           className
         )}
       />
     </>
   );
 }
+
