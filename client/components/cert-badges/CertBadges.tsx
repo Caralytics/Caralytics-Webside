@@ -19,11 +19,12 @@ export default function CertBadges({ className }: CertBadgesProps) {
       <Image
         src="/assets/cert-badge-2.png"
         alt="Zertifizierter Gutachter"
-        width={620}
+        width={710}
         height={201}
         className={twMerge(defaultClassName, className)}
       />
     </>
   );
 }
+
 
