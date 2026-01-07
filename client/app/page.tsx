@@ -11,7 +11,6 @@ export default function Home() {
       <section className="relative h-screen w-full flex items-center justify-center">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
-          {/* Fallback gradient background */}
           <div className="absolute inset-0 bg-linear-to-br from-brand-deep-navy via-brand-deep-navy/90 to-brand-deep-navy/80" />
           <Image
             alt="Caralytics"
@@ -22,19 +21,16 @@ export default function Home() {
             loading="eager"
           />
           <BackgroundCover />
-          {/* Vignette overlay - soft circle fade effect */}
           <div className="absolute inset-0 bg-linear-to-br from-brand-deep-navy/50 via-brand-cloud-gray/20 to-brand-deep-navy/50" />
         </div>
 
         {/* Content */}
         <div className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 lg:px-16 text-center">
           <div className="flex flex-col items-center justify-center gap-2 md:gap-2 mt-20">
-            {/* H1 Title */}
             <h1 className="text-xl md:text-2xl lg:text-[28px] font-light text-brand-white/60 leading-relaxed max-w-3xl animate-[fade-in_2.5s_ease-in-out_1_forwards]">
               Unfallgutachten in Köln - Tüv zertifiziert vom Fahrzeugingenieur
             </h1>
 
-            {/* CTA Button */}
             <div className="mt-4 md:mt-6 animate-[fade-in_1.5s_ease-in-out_1_forwards]">
               <Button
                 asChild
@@ -47,20 +43,33 @@ export default function Home() {
           </div>
         </div>
 
-        {/* TÜV Badge – sichtbar auf Mobile & Desktop */}
+        {/* TÜV Badge */}
         <div className="absolute bottom-8 sm:bottom-6 md:bottom-4 left-0 right-0 z-20 w-full pointer-events-none">
           <div className="max-w-[1920px] mx-auto px-6 sm:px-10 md:px-10 lg:px-16">
             <div className="flex justify-end pb-8">
               <div className="pointer-events-auto animate-[fade-in_3s_ease-in-out_1_forwards]">
-                <div className="inline-flex items-center justify-center rounded-xl border border-white/80 bg-white/45 backdrop-blur-md px-2.5 py-1.5 shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-xl">
+
+                {/* Compact, bright, high-contrast badge wrapper */}
+                <div className="
+                  inline-flex items-center justify-center
+                  rounded-xl
+                  border border-white/90
+                  bg-white/85
+                  backdrop-blur-lg
+                  px-1.5 py-1
+                  shadow-xl
+                  transform transition-all duration-500
+                  hover:scale-110 hover:shadow-2xl
+                ">
                   <Image
                     src="/assets/cert-badge-2.png"
                     alt="TÜV Rheinland Certified – ID 0000085895"
                     width={2000}
                     height={1000}
-                    className="h-8 w-auto sm:h-9 md:h-12 lg:h-14"
+                    className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
                   />
                 </div>
+
               </div>
             </div>
           </div>
