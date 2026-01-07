@@ -8,14 +8,13 @@ interface CertBadgesProps {
 export default function CertBadges({ className }: CertBadgesProps) {
   const imageBase = "w-auto object-contain transition-all duration-300";
 
-  // Nur für das TÜV-Badge: sehr dezenter Hintergrund für Kontrast
+  // TÜV – schlanker, aber kontrastreicher Wrapper
   const tuvWrapper =
-    const tuvWrapper =
-  "inline-flex items-center justify-center rounded-xl border border-white/80 bg-white/45 backdrop-blur-md px-2.5 py-1.5 shadow-[0_0_30px_rgba(255,255,255,0.30)]";
+    "inline-flex items-center justify-center rounded-xl border border-white/80 bg-white/45 backdrop-blur-md px-2.5 py-1.5 shadow-lg";
 
   return (
     <div className="flex items-center gap-4">
-      {/* VDI – bleibt „nackt“, weil es selbst schon einen Kasten hat */}
+      {/* VDI – hat eigenen hellen Kasten, bleibt unverändert */}
       <Image
         src="/assets/cert-badge-1.png"
         alt="Verband Deutscher Ingenieure – Mitglied"
@@ -24,7 +23,7 @@ export default function CertBadges({ className }: CertBadgesProps) {
         className={twMerge(imageBase, className)}
       />
 
-      {/* TÜV – bekommt einen ganz leichten Rahmen für Kontrast */}
+      {/* TÜV – dezenter, kontrastreicher Hintergrund ohne klobigen Kasten */}
       <div className={tuvWrapper}>
         <Image
           src="/assets/cert-badge-2.png"
@@ -37,5 +36,4 @@ export default function CertBadges({ className }: CertBadgesProps) {
     </div>
   );
 }
-
 
