@@ -9,22 +9,29 @@ export default function CertBadges({ className }: CertBadgesProps) {
   const imageBase =
     "w-auto object-contain transition-all duration-300";
 
-  // PREMIUM CARD STYLE
+  // Super-edle, aber leichtere Glass-Card
   const card =
-    "relative rounded-3xl px-5 py-3 flex items-center justify-center " +
-    // glassmorphism
-    "bg-white/70 backdrop-blur-xl " +
-    // soft gradient overlay
-    "before:absolute before:inset-0 before:rounded-3xl before:bg-gradient-to-br before:from-white/60 before:to-white/10 before:pointer-events-none " +
-    // inner subtle stroke
-    "border border-white/60 " +
-    // outer subtle shadow glow
-    "shadow-[0_20px_60px_rgba(0,0,0,0.12)] " +
-    // hover motion + glow
-    "hover:-translate-y-[3px] hover:shadow-[0_25px_70px_rgba(0,0,0,0.18)] transition-all duration-500";
+    [
+      "relative inline-flex items-center justify-center",
+      "rounded-3xl",
+      // etwas kleiner & transparenter im Normalzustand
+      "px-4 py-2 md:px-5 md:py-3",
+      "bg-white/35 backdrop-blur-xl",
+      // feiner Verlauf
+      "before:absolute before:inset-0 before:rounded-3xl",
+      "before:bg-gradient-to-br before:from-white/50 before:to-white/5",
+      "before:pointer-events-none",
+      // zarter Rand + Shadow
+      "border border-white/40",
+      "shadow-[0_14px_40px_rgba(0,0,0,0.14)]",
+      // Hover: größer + mehr Tiefe
+      "transform scale-[0.96] hover:scale-105",
+      "hover:shadow-[0_20px_55px_rgba(0,0,0,0.20)]",
+      "transition-all duration-500",
+    ].join(" ");
 
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex items-center gap-4">
       {/* VDI */}
       <div className={card}>
         <Image
