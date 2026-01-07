@@ -6,27 +6,28 @@ interface CertBadgesProps {
 }
 
 export default function CertBadges({ className }: CertBadgesProps) {
-  const defaultClassName =
-    "opacity-60 h-16 md:h-20 w-auto object-contain hover:opacity-100 transition-all duration-300 hover:scale-105";
+  // Gemeinsame Styles
+  const baseClassName =
+    "opacity-60 w-auto object-contain transition-all duration-300 hover:opacity-100 hover:scale-105";
 
   return (
     <>
       {/* VDI-Badge */}
       <Image
         src="/assets/cert-badge-1.png"
-        alt="Verband Deutscher Ingenieure - MITGLIED"
-        width={573}
-        height={202}
-        className={twMerge(defaultClassName, className)}
+        alt="Verband Deutscher Ingenieure - Mitglied"
+        width={600}
+        height={250}
+        className={twMerge(baseClassName, className)}
       />
 
-      {/* TÜV-Badge */}
+      {/* TÜV Rheinland Badge */}
       <Image
         src="/assets/cert-badge-2.png"
-        alt="TÜV Rheinland Certified – ID 0000085895"
-        width={400}  // 16:7 Verhältnis: 400 / 175 ≈ 2,285
-        height={175}
-        className={twMerge(defaultClassName, className)}
+        alt="TÜV Rheinland Certified"
+        width={2000}   // passend zu deinem neuen Web-Export
+        height={1000}
+        className={twMerge(baseClassName, className)}
       />
     </>
   );
