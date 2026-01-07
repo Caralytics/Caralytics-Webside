@@ -47,26 +47,31 @@ export default function Home() {
           </div>
         </div>
 
-        {/* TÜV Badge – clean, ohne Zusatzkasten */}
+        {/* TÜV Badge – heller Button mit wenig, aber genügend Padding */}
         <div className="absolute bottom-8 sm:bottom-6 md:bottom-4 left-0 right-0 z-20 w-full pointer-events-none">
           <div className="max-w-[1920px] mx-auto px-6 sm:px-10 md:px-10 lg:px-16">
             <div className="flex justify-end pb-8">
               <div className="pointer-events-auto animate-[fade-in_3s_ease-in-out_1_forwards]">
-                <Image
-                  src="/assets/cert-badge-2.png"
-                  alt="TÜV Rheinland Certified – ID 0000085895"
-                  width={2000}
-                  height={1000}
+                <div
                   className="
-                    h-10 w-auto
-                    sm:h-12
-                    md:h-14
-                    lg:h-16
-                    drop-shadow-xl
-                    transition-transform duration-500
-                    hover:scale-110
+                    inline-flex items-center justify-center
+                    bg-white
+                    border border-black/10
+                    rounded-xl
+                    px-2 py-1.5
+                    shadow-xl
+                    transition-all duration-500
+                    hover:scale-110 hover:shadow-2xl
                   "
-                />
+                >
+                  <Image
+                    src="/assets/cert-badge-2.png"
+                    alt="TÜV Rheinland Certified – ID 0000085895"
+                    width={2000}
+                    height={1000}
+                    className="h-10 w-auto sm:h-12 md:h-14 lg:h-16 m-0"
+                  />
+                </div>
               </div>
             </div>
           </div>
