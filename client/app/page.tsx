@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ASSETS_SRC } from "@/lib/routes";
 import Image from "next/image";
 import Link from "next/link";
+
 export default function Home() {
   return (
     <>
@@ -46,23 +47,27 @@ export default function Home() {
           </div>
         </div>
 
-  {/* TÜV Badge – sichtbar auf Mobile & Desktop */}
-<div className="absolute bottom-0 left-0 right-0 z-20 w-full pointer-events-none">
-  <div className="max-w-[1920px] mx-auto px-6 sm:px-10 md:px-10 lg:px-16">
-    <div className="flex justify-end pb-8">
-      <div className="pointer-events-auto animate-[fade-in_3s_ease-in-out_1_forwards]">
-
-        <div className="inline-flex items-center justify-center rounded-xl border border-white/80 bg-white/45 backdrop-blur-md px-2.5 py-1.5 shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-xl">
-          <Image
-            src="/assets/cert-badge-2.png"
-            alt="TÜV Rheinland Certified – ID 0000085895"
-            width={2000}
-            height={1000}
-            className="h-8 w-auto sm:h-9 md:h-10"
-          />
+        {/* TÜV Badge – sichtbar auf Mobile & Desktop */}
+        <div className="absolute bottom-0 left-0 right-0 z-20 w-full pointer-events-none">
+          <div className="max-w-[1920px] mx-auto px-6 sm:px-10 md:px-10 lg:px-16">
+            <div className="flex justify-end pb-8">
+              <div className="pointer-events-auto animate-[fade-in_3s_ease-in-out_1_forwards]">
+                <div className="inline-flex items-center justify-center rounded-xl border border-white/80 bg-white/45 backdrop-blur-md px-2.5 py-1.5 shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-xl">
+                  <Image
+                    src="/assets/cert-badge-2.png"
+                    alt="TÜV Rheinland Certified – ID 0000085895"
+                    width={2000}
+                    height={1000}
+                    className="h-8 w-auto sm:h-9 md:h-10"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-      </div>
-    </div>
-  </div>
-</div>
+      <ServicesSection />
+    </>
+  );
+}
