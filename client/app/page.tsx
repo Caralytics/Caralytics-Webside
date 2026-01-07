@@ -47,32 +47,26 @@ export default function Home() {
           </div>
         </div>
 
-        {/* TÜV Badge – mobil höher, Desktop größer */}
+        {/* TÜV Badge – clean, ohne Zusatzkasten */}
         <div className="absolute bottom-8 sm:bottom-6 md:bottom-4 left-0 right-0 z-20 w-full pointer-events-none">
           <div className="max-w-[1920px] mx-auto px-6 sm:px-10 md:px-10 lg:px-16">
             <div className="flex justify-end pb-8">
               <div className="pointer-events-auto animate-[fade-in_3s_ease-in-out_1_forwards]">
-                <div
+                <Image
+                  src="/assets/cert-badge-2.png"
+                  alt="TÜV Rheinland Certified – ID 0000085895"
+                  width={2000}
+                  height={1000}
                   className="
-                    inline-flex items-center justify-center
-                    rounded-l-2xl rounded-r-md
-                    border border-white/90
-                    bg-white/85
-                    backdrop-blur-lg
-                    p-0
-                    shadow-xl
-                    transform transition-all duration-500
-                    hover:scale-110 hover:shadow-2xl
+                    h-10 w-auto
+                    sm:h-12
+                    md:h-14
+                    lg:h-16
+                    drop-shadow-xl
+                    transition-transform duration-500
+                    hover:scale-110
                   "
-                >
-                  <Image
-                    src="/assets/cert-badge-2.png"
-                    alt="TÜV Rheinland Certified – ID 0000085895"
-                    width={2000}
-                    height={1000}
-                    className="h-10 w-auto sm:h-12 md:h-14 lg:h-16 m-0"
-                  />
-                </div>
+                />
               </div>
             </div>
           </div>
