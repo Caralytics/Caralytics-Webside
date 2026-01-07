@@ -143,7 +143,7 @@ export default function Footer() {
               Zertifikationen und Mitgliedschaften
             </h4>
             <div className="flex gap-4">
-              <CertBadges />
+              <CertBadges className="h-10 md:h-12 lg:h-14"/>
             </div>
           </div>
         </div>
