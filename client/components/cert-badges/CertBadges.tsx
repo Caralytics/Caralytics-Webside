@@ -9,24 +9,39 @@ export default function CertBadges({ className }: CertBadgesProps) {
   const imageBase =
     "w-auto object-contain transition-all duration-300";
 
-  // Super-edle, aber leichtere Glass-Card
+  // EXTREME PREMIUM GLASS CARD
   const card =
     [
       "relative inline-flex items-center justify-center",
       "rounded-3xl",
-      // etwas kleiner & transparenter im Normalzustand
       "px-4 py-2 md:px-5 md:py-3",
-      "bg-white/35 backdrop-blur-xl",
-      // feiner Verlauf
+
+      // viel transparenter, stärkerer Glaslook
+      "bg-white/25",
+
+      // Glassmorph Blur (Footer-Hintergrund wirkt wie „durch Frostglas“)
+      "backdrop-blur-2xl",
+
+      // zarter Verlauf, etwas heller oben
       "before:absolute before:inset-0 before:rounded-3xl",
-      "before:bg-gradient-to-br before:from-white/50 before:to-white/5",
+      "before:bg-gradient-to-br before:from-white/40 before:to-white/0",
       "before:pointer-events-none",
-      // zarter Rand + Shadow
-      "border border-white/40",
-      "shadow-[0_14px_40px_rgba(0,0,0,0.14)]",
-      // Hover: größer + mehr Tiefe
-      "transform scale-[0.96] hover:scale-105",
-      "hover:shadow-[0_20px_55px_rgba(0,0,0,0.20)]",
+
+      // feiner Hairline-Border (Apple-Style)
+      "border border-white/50",
+
+      // subtiler Glow
+      "shadow-[0_18px_60px_rgba(0,0,0,0.22)]",
+
+      // Start etwas kleiner + dezente Hover-Vergrößerung
+      "transform scale-[0.94] hover:scale-105",
+
+      // mehr Tiefe auf Hover
+      "hover:shadow-[0_25px_75px_rgba(0,0,0,0.28)]",
+
+      // für Footer: Badge IMMER über dem Hintergrund
+      "z-10",
+
       "transition-all duration-500",
     ].join(" ");
 
