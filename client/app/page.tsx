@@ -48,7 +48,7 @@ export default function Home() {
         </div>
 
         {/* TÜV Badge – sichtbar auf Mobile & Desktop */}
-        <div className="absolute bottom-0 left-0 right-0 z-20 w-full pointer-events-none">
+        <div className="absolute bottom-8 sm:bottom-6 md:bottom-4 left-0 right-0 z-20 w-full pointer-events-none">
           <div className="max-w-[1920px] mx-auto px-6 sm:px-10 md:px-10 lg:px-16">
             <div className="flex justify-end pb-8">
               <div className="pointer-events-auto animate-[fade-in_3s_ease-in-out_1_forwards]">
@@ -58,7 +58,7 @@ export default function Home() {
                     alt="TÜV Rheinland Certified – ID 0000085895"
                     width={2000}
                     height={1000}
-                    className="h-8 w-auto sm:h-9 md:h-10"
+                    className="h-8 w-auto sm:h-9 md:h-12 lg:h-14"
                   />
                 </div>
               </div>
