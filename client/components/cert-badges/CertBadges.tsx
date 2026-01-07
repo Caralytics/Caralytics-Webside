@@ -10,7 +10,8 @@ export default function CertBadges({ className }: CertBadgesProps) {
 
   // Nur für das TÜV-Badge: sehr dezenter Hintergrund für Kontrast
   const tuvWrapper =
-    "inline-flex items-center justify-center rounded-xl border border-white/30 bg-white/10 px-2 py-1";
+    const tuvWrapper =
+  "inline-flex items-center justify-center rounded-xl border border-white/80 bg-white/45 backdrop-blur-md px-2.5 py-1.5 shadow-[0_0_30px_rgba(255,255,255,0.30)]";
 
   return (
     <div className="flex items-center gap-4">
@@ -36,4 +37,5 @@ export default function CertBadges({ className }: CertBadgesProps) {
     </div>
   );
 }
+
 
