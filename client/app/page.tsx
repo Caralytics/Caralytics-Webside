@@ -1,4 +1,3 @@
-import CertBadges from "@/components/cert-badges/CertBadges";
 import BackgroundCover from "@/components/home/BackgroundCover";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { Button } from "@/components/ui/button";
@@ -47,17 +46,23 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 z-20 w-full pointer-events-none hidden sm:block">
-          <div className="max-w-[1920px] mx-auto px-6 sm:px-10 md:px-10 lg:px-16">
-            <div className="flex justify-end pb-8">
-              <div className="pointer-events-auto flex items-center gap-6 animate-[fade-in_3s_ease-in-out_1_forwards]">
-                <CertBadges className="w-[120px] h-[68px] drop-shadow-sm" />
-              </div>
-            </div>
-          </div>
+  {/* TÜV Badge – sichtbar auf Mobile & Desktop */}
+<div className="absolute bottom-0 left-0 right-0 z-20 w-full pointer-events-none">
+  <div className="max-w-[1920px] mx-auto px-6 sm:px-10 md:px-10 lg:px-16">
+    <div className="flex justify-end pb-8">
+      <div className="pointer-events-auto animate-[fade-in_3s_ease-in-out_1_forwards]">
+
+        <div className="inline-flex items-center justify-center rounded-xl border border-white/80 bg-white/45 backdrop-blur-md px-2.5 py-1.5 shadow-lg transform transition-all duration-500 hover:scale-110 hover:shadow-xl">
+          <Image
+            src="/assets/cert-badge-2.png"
+            alt="TÜV Rheinland Certified – ID 0000085895"
+            width={2000}
+            height={1000}
+            className="h-8 w-auto sm:h-9 md:h-10"
+          />
         </div>
-      </section>
-      <ServicesSection />
-    </>
-  );
-}
+
+      </div>
+    </div>
+  </div>
+</div>
