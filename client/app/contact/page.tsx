@@ -45,7 +45,7 @@ const contactMethods = [
     label: "Büro Köln",
     description: "Besichtigung vor Ort",
     value: "Rudolfplatz 3, 50674 Köln",
-    href: "https://maps.google.com/?q=Rudolfplatz+3+50674+Köln",
+    href: "https://maps.google.com/maps?q=Rudolfplatz+3,+50674+Köln",
     primary: false,
   },
 ];
@@ -158,28 +158,31 @@ const ContactPage = () => {
                         <Clock className="w-4 h-4 text-purple-400" />
                         <span className="text-sm font-medium text-purple-200">Öffnungszeiten</span>
                     </div>
-                    <p className="font-semibold">Mo - Fr: 08:00 - 18:00 Uhr</p>
+                    {/* HIER GEÄNDERT: Neue Öffnungszeiten */}
+                    <p className="font-semibold">Mo - Sa: 09:00 - 19:00 Uhr</p>
                     <p className="text-sm text-slate-300">Termine nach Vereinbarung</p>
                   </div>
                 </div>
             </FadeIn>
 
             <FadeIn direction="left" delay={200}>
-                {/* Map Container */}
+                {/* Google Map Container */}
                 <div className="relative w-full h-[400px] rounded-3xl overflow-hidden shadow-lg border border-slate-200 bg-white p-2">
+                  {/* HIER GEÄNDERT: Google Maps Embed */}
                   <iframe
                     width="100%"
                     height="100%"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=6.938931047916413%2C50.9355134054576%2C6.94075495004654%2C50.93641940484611&amp;layer=mapnik&amp;marker=50.93596640735823%2C6.939842998981476"
+                    src="https://maps.google.com/maps?q=Rudolfplatz+3,+50674+Köln&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     className="rounded-2xl w-full h-full"
                     style={{ border: 0 }}
                     loading="lazy"
+                    title="Google Maps Caralytics Standort"
                   ></iframe>
                   
                   {/* Overlay Button */}
                   <div className="absolute bottom-6 right-6">
                       <Button asChild size="sm" className="bg-brand-deep-navy text-white hover:bg-purple-700 shadow-lg">
-                          <Link href="https://maps.google.com/?q=Rudolfplatz+3+50674+Köln" target="_blank">
+                          <Link href="https://maps.google.com/maps?q=Rudolfplatz+3,+50674+Köln" target="_blank">
                               Route planen
                           </Link>
                       </Button>
