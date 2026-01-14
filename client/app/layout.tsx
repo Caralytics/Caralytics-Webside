@@ -17,7 +17,6 @@ export const metadata: Metadata = {
     "Kfz-Gutachter Köln – Unfallgutachten & Schadengutachten | Caralytics Engineering",
   description:
     "Unfall in Köln passiert? Unfallgutachten durch Fahrzeugingenieur und TÜV-geschulten Kfz-Sachverständigen in Köln – wir sichern Beweise, ermitteln die Schadenhöhe und unterstützen bei der Regulierung mit der Versicherung.",
-  icons: "/assets/logo/favicon-32x32-and-16x16/32x32.png",
 };
 
 export default function RootLayout({
