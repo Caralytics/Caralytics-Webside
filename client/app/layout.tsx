@@ -1,7 +1,5 @@
 import CookieBanner from "@/components/CookieBanner";
 import Analytics from "@/components/Analytics";
-import Footer from "@/components/navigation/Footer";
-import Navbar from "@/components/navigation/Navbar";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
@@ -13,10 +11,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Kfz-Gutachter Köln – Unfallgutachten & Schadengutachten | Caralytics Engineering",
+  title: "Caralytics – Engineering | Technology Preview",
   description:
-    "Unfall in Köln passiert? Unfallgutachten durch Fahrzeugingenieur und TÜV-geschulten Kfz-Sachverständigen in Köln – wir sichern Beweise, ermitteln die Schadenhöhe und unterstützen bei der Regulierung mit der Versicherung.",
+    "Caralytics Technology Preview – Die Zukunft der Fahrzeuganalyse.",
 };
 
 export default function RootLayout({
@@ -26,15 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-
-      
       <body
         className={`${manrope.variable} font-sans bg-brand-deep-navy flex flex-col w-screen overflow-x-hidden`}
       >
         <Analytics />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+
+        {/* KEIN Navbar */}
+        <main className="flex-1">{children}</main>
+
+        {/* KEIN Footer */}
         <CookieBanner />
       </body>
     </html>
