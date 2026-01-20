@@ -10,6 +10,16 @@ const nextConfig = {
       },
     ],
   },
+
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/technology",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
