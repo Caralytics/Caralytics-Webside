@@ -1,5 +1,6 @@
 import CookieBanner from "@/components/CookieBanner";
 import Analytics from "@/components/Analytics";
+import Navbar from "@/components/navigation/Navbar";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
@@ -11,9 +12,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Caralytics – Engineering | Technology Preview",
-  description:
-    "Caralytics Technology Preview – Die Zukunft der Fahrzeuganalyse.",
+  title: "Caralytics – Engineering",
+  description: "Technology Preview",
 };
 
 export default function RootLayout({
@@ -24,14 +24,16 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-        className={`${manrope.variable} font-sans bg-brand-deep-navy flex flex-col w-screen overflow-x-hidden`}
+        className={`${manrope.variable} font-sans bg-brand-deep-navy min-h-screen w-full overflow-x-hidden`}
       >
         <Analytics />
 
-        {/* KEIN Navbar */}
-        <main className="flex-1">{children}</main>
+        {/* Navbar sichtbar */}
+        <Navbar />
 
-        {/* KEIN Footer */}
+        {/* Content */}
+        <main className="pt-24">{children}</main>
+
         <CookieBanner />
       </body>
     </html>
