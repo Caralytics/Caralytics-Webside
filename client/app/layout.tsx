@@ -12,7 +12,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Caralytics – Engineering",
+  title: "Caralytics Engineering",
   description: "Technology Preview",
 };
 
