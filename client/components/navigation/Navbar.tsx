@@ -13,9 +13,9 @@ export default function Navbar() {
 
   const isSolid = scrolled || !isHomePage;
 
-  const bgStyle = isSolid
-    ? "bg-brand-arsenic-gray border-b border-brand-graphite-gray/50 backdrop-blur-sm"
-    : "bg-transparent";
+const bgStyle = isSolid
+  ? "bg-[rgba(15,20,35,0.65)] border-b border-white/10 backdrop-blur-xl shadow-lg shadow-black/30"
+  : "bg-transparent";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,3 +72,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
