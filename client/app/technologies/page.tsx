@@ -19,8 +19,13 @@ const TechBadge = ({ children, delay = 0 }: { children: React.ReactNode; delay?:
 
 const GridBackground = () => (
   <div className="absolute inset-0 -z-30 overflow-hidden pointer-events-none">
+    {/* Noise Texture */}
     <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+    
+    {/* Radial Fade */}
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_transparent_10%,_#020617_90%)]" />
+
+    {/* Moving Grid */}
     <div 
       className="absolute inset-0 opacity-[0.15]"
       style={{
@@ -37,7 +42,7 @@ export default function TechnologiesPage() {
 
   // Fake loading sequence
   useEffect(() => {
-    // Optional: Add logic here if needed
+    // Optional logic
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -166,6 +171,7 @@ export default function TechnologiesPage() {
                         <Activity className="w-3 h-3 text-purple-400" /> 
                         <span>ANALYSIS_ENGINE_ACTIVE</span>
                     </div>
+                    {/* Fixed string format below */}
                     <div>FPS: 60 // PING: 12ms</div>
                 </div>
             </div>
