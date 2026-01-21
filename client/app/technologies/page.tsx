@@ -85,7 +85,7 @@ export default function TechnologiesPage() {
             <TechBadge delay={0.4}><Lock className="w-3 h-3" /> Stealth Mode</TechBadge>
           </div>
 
-          {/* LOGO SECTION - Korrigierter Pfad */}
+          {/* LOGO SECTION - Logo ist jetzt kleiner */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -95,8 +95,8 @@ export default function TechnologiesPage() {
              <img 
                src="/assets/logo/svg/logo-purple-white-emblem-with-text.svg" 
                alt="Caralytics Logo" 
-               // Habe die Höhe leicht angepasst, damit das Logo mit Text nicht zu riesig wird
-               className="h-16 md:h-24 w-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+               // HIER: Größe angepasst (kleiner)
+               className="h-10 md:h-16 w-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]"
              />
           </motion.div>
 
@@ -144,21 +144,22 @@ export default function TechnologiesPage() {
             )}
           </motion.div>
 
-          {/* HUD / Video Container - BRIGHT & CLEAN */}
+          {/* HUD / Video Container - LILA EFFEKTE + VIGNETTE */}
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="relative w-full max-w-5xl aspect-video rounded-xl overflow-hidden border border-white/20 bg-black shadow-[0_0_50px_-10px_rgba(255,255,255,0.1)]"
+            // HIER: Rahmen und Schatten wieder Lila
+            className="relative w-full max-w-5xl aspect-video rounded-xl overflow-hidden border border-purple-500/20 bg-black shadow-[0_0_50px_-10px_rgba(120,0,255,0.2)]"
           >
-            {/* HUD Overlay Elements - Corners (Clean White) */}
-            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-white/40 rounded-tl-lg z-20" />
-            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-white/40 rounded-tr-lg z-20" />
-            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-white/40 rounded-bl-lg z-20" />
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-white/40 rounded-br-lg z-20" />
+            {/* HUD Overlay Elements - Corners (Wieder Lila) */}
+            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-purple-500/50 rounded-tl-lg z-20" />
+            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-purple-500/50 rounded-tr-lg z-20" />
+            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-purple-500/50 rounded-bl-lg z-20" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-purple-500/50 rounded-br-lg z-20" />
             
-            {/* Scanning Line Animation - White */}
-            <div className="absolute inset-0 z-10 pointer-events-none bg-[linear-gradient(to_bottom,transparent_0%,rgba(255,255,255,0.1)_50%,transparent_100%)] h-[20%] w-full animate-scanline" />
+            {/* Scanning Line Animation - Wieder Lila */}
+            <div className="absolute inset-0 z-10 pointer-events-none bg-[linear-gradient(to_bottom,transparent_0%,rgba(120,0,255,0.1)_50%,transparent_100%)] h-[20%] w-full animate-scanline" />
 
             {/* Video Placeholder */}
             <div className="relative w-full h-full">
@@ -167,14 +168,18 @@ export default function TechnologiesPage() {
                   loop
                   muted
                   playsInline
+                  // HIER: Video ist klar (kein Filter, volle Opacity)
                   className="w-full h-full object-cover opacity-100"
                   src="/assets/coming-soon.webm" 
                 />
                 
-                {/* Data Overlay */}
-                <div className="absolute bottom-8 left-8 flex flex-col gap-1 z-20 font-mono text-[10px] text-white/90 drop-shadow-md">
+                {/* NEU: Vignette Overlay (Dunkle Ecken, klare Mitte) */}
+                <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_30%,#020617_90%)] opacity-60 z-10" />
+
+                {/* Data Overlay - Wieder Lila Akzente */}
+                <div className="absolute bottom-8 left-8 flex flex-col gap-1 z-20 font-mono text-[10px] text-purple-100/90 drop-shadow-md">
                     <div className="flex items-center gap-2">
-                        <Activity className="w-3 h-3 text-white" /> 
+                        <Activity className="w-3 h-3 text-purple-400" /> 
                         <span>ANALYSIS_ENGINE_ACTIVE</span>
                     </div>
                     <div>FPS: 60 // PING: 12ms</div>
