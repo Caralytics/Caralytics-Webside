@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Cpu, ChevronRight, Lock, Activity, Globe, ShieldCheck } from "lucide-react";
-import { cn } from "@/lib/utils"; // Assumes you have a utility for tailwind class merging
 
 // --- Components ---
 
@@ -20,13 +19,8 @@ const TechBadge = ({ children, delay = 0 }: { children: React.ReactNode; delay?:
 
 const GridBackground = () => (
   <div className="absolute inset-0 -z-30 overflow-hidden pointer-events-none">
-    {/* Noise Texture for cinematic feel */}
     <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-    
-    {/* Radial Fade */}
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_transparent_10%,_#020617_90%)]" />
-
-    {/* Moving Grid */}
     <div 
       className="absolute inset-0 opacity-[0.15]"
       style={{
@@ -38,24 +32,21 @@ const GridBackground = () => (
   </div>
 );
 
-export default function CaralyticsStealthPage() {
-  const [email, setEmail] = useState("");
+export default function TechnologiesPage() {
   const [submitted, setSubmitted] = useState(false);
 
-  // Fake loading sequence for tech feel
-  const [systemReady, setSystemReady] = useState(false);
+  // Fake loading sequence
   useEffect(() => {
-    setTimeout(() => setSystemReady(true), 800);
+    // Optional: Add logic here if needed
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
-    // Here you would connect to your API
   };
 
   return (
-    <main className="relative min-h-screen w-full flex flex-col items-center justify-center bg-[#020617] text-white overflow-hidden selection:bg-brand-electric-purple selection:text-white">
+    <main className="relative min-h-screen w-full flex flex-col items-center justify-center bg-[#020617] text-white overflow-hidden selection:bg-purple-500 selection:text-white">
       <GridBackground />
 
       {/* Glow Effects */}
@@ -108,7 +99,7 @@ export default function CaralyticsStealthPage() {
             <span className="text-white font-medium">Wir bauen die Wahrheit in Datenform.</span>
           </motion.p>
 
-          {/* Email Capture / Access Request */}
+          {/* Email Capture */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -158,18 +149,23 @@ export default function CaralyticsStealthPage() {
             {/* Scanning Line Animation */}
             <div className="absolute inset-0 z-10 pointer-events-none bg-[linear-gradient(to_bottom,transparent_0%,rgba(120,0,255,0.1)_50%,transparent_100%)] h-[20%] w-full animate-scanline" />
 
-            <video
-              autoPlay
-  loop
-  muted
-  playsInline
-  className="w-full h-full object-cover opacity-60 grayscale-[40%] contrast-125"
-  src="/assets/coming-soon.webm" 
-/>
+            {/* Video Placeholder */}
+            <div className="relative w-full h-full">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover opacity-60 grayscale-[40%] contrast-125"
+                  src="/assets/coming-soon.webm" 
+                />
                 
                 {/* Data Overlay inside Video */}
                 <div className="absolute bottom-8 left-8 flex flex-col gap-1 z-20 font-mono text-[10px] text-white/70">
-                    <div className="flex items-center gap-2"><Activity className="w-3 h-3 text-purple-400" /> ANALYSIS_ENGINE_ACTIVE</div>
+                    <div className="flex items-center gap-2">
+                        <Activity className="w-3 h-3 text-purple-400" /> 
+                        <span>ANALYSIS_ENGINE_ACTIVE</span>
+                    </div>
                     <div>FPS: 60 // PING: 12ms</div>
                 </div>
             </div>
@@ -195,7 +191,6 @@ export default function CaralyticsStealthPage() {
 
       </div>
       
-      {/* CSS Animations via Tailwind Config or inline styles */}
       <style jsx global>{`
         @keyframes scanline {
           0% { top: -20%; opacity: 0; }
