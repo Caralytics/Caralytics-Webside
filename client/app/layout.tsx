@@ -1,40 +1,31 @@
-import CookieBanner from "@/components/CookieBanner";
-import Analytics from "@/components/Analytics";
-import Navbar from "@/components/navigation/Navbar";
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google"; // Falls du Fonts nutzt
 import "./globals.css";
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
-});
+// ... Fonts setup ...
 
 export const metadata: Metadata = {
-  title: "Caralytics Engineering",
-  description: "Technology Preview",
+  title: {
+    default: "Caralytics | Automotive Intelligence",
+    template: "%s | Caralytics",
+  },
+  description: "The new standard in automotive data analysis. AI-driven precision for vehicle valuation and damage assessment. Coming 2026.",
+  keywords: ["Automotive AI", "Vehicle Data", "Stealth Startup", "Car Analytics"],
+  robots: {
+    index: true,
+    follow: true, // Wir erlauben Google, die Startseite zu sehen
+  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="de">
-      <body
-        className={`${manrope.variable} font-sans bg-brand-deep-navy min-h-screen w-full overflow-x-hidden`}
-      >
-        <Analytics />
-
-        {/* Navbar sichtbar */}
-        <Navbar />
-
-        {/* Content */}
-        <main className="pt-24">{children}</main>
-
-        <CookieBanner />
+    <html lang="en" className="dark"> 
+      <body className="bg-[#020617] antialiased">
+        {children}
       </body>
     </html>
   );
