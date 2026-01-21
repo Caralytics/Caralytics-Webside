@@ -1,15 +1,19 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+import type { NextConfig } from "next";
 
-  images: {
-    remotePatterns: [
+const nextConfig: NextConfig = {
+  // ... deine anderen configs falls vorhanden
+
+  async redirects() {
+    return [
       {
-        protocol: "https",
-        hostname: "*.unsplash.com",
+        // REGEX: Fängt ALLES ab, was NICHT die Startseite, Assets oder System-Dateien sind.
+        // Das ist der "Staubsauger". Egal was der User eingibt -> Ab zur Startseite.
+        source: '/((?!_next|assets|favicon.ico|robots.txt|sitemap.xml).+)',
+        destination: '/',
+        permanent: true, // 301 Redirect: Sagt Google "Die alte Seite ist FÜR IMMER weg"
       },
-    ],
+    ];
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
