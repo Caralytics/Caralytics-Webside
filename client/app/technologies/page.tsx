@@ -158,17 +158,14 @@ export default function CaralyticsStealthPage() {
             {/* Scanning Line Animation */}
             <div className="absolute inset-0 z-10 pointer-events-none bg-[linear-gradient(to_bottom,transparent_0%,rgba(120,0,255,0.1)_50%,transparent_100%)] h-[20%] w-full animate-scanline" />
 
-            {/* Video Placeholder or Actual Video */}
-            <div className="relative w-full h-full">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover opacity-60 grayscale-[40%] contrast-125"
-                  // Hier dein existierendes Video einfügen oder ein abstraktes Tech-Video
-                  src="/assets/coming-soon.webm" 
-                />
+            <video
+              autoPlay
+  loop
+  muted
+  playsInline
+  className="w-full h-full object-cover opacity-60 grayscale-[40%] contrast-125"
+  src="/assets/coming-soon.webm" 
+/>
                 
                 {/* Data Overlay inside Video */}
                 <div className="absolute bottom-8 left-8 flex flex-col gap-1 z-20 font-mono text-[10px] text-white/70">
